@@ -66,6 +66,13 @@ truth）應該歸屬後端，前端不該自己保管一份「正本」**，理�
 - 之後如果真的接上後端 API：只要改 `src/services/salesDataService.ts`
   這一個檔案（把讀本地檔案換成 `fetch` API），其他元件、hooks 完全不用動。
 
+## 執行環境
+
+- **Node.js 24**：本機開發與 CI（`.github/workflows/ci.yml`）都固定用 Node 24。
+- **npm**：套件管理員固定用 npm（repo 內只有 `frontend/package-lock.json`），
+  請不要混用 yarn／pnpm，避免 lockfile 衝突。
+- **作業系統**：沒有特殊系統相依，Windows／macOS／Linux 皆可開發。
+
 ## 開發指令
 
 ```bash
